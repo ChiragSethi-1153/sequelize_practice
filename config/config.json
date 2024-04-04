@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "Sequelize_practice",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "chirag",
+    "password": "admin",
+    "database": "sequelize_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "chirag",
+    "password": "admin",
+    "database": "sequelize_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
