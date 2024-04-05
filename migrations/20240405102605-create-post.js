@@ -13,6 +13,9 @@ module.exports = {
         type: Sequelize.STRING,
         defaultValue: Sequelize.UUIDV4
       },
+      userId: {
+        type: Sequelize.INTEGER
+      },
       body: {
         type: Sequelize.STRING
       },
@@ -27,6 +30,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Posts');
+    await queryInterface.dropTable('posts');
   }
 };

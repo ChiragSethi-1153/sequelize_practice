@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ post }) {
       // define association here
-      this.hasMany(post, {foreignKey: 'postId'})
+      this.hasMany(post, {foreignKey: 'userId'})
     }
 
     toJSON(){
@@ -23,7 +23,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {msg: 'cant be empty'},
+        notEmpty: {msg: 'cant be empty'}
+      }
+    },
     email: DataTypes.STRING,
     role: DataTypes.STRING
   }, {
